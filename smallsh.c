@@ -27,25 +27,6 @@ Overview:
 	 		- CTRL-C sends SIGINT to parent process and
 		  children; foreground process handles its
 		  own SIGINT i.e. parent doesn't kill fg
-	 
-	hints and tips (for me):
-	 * fflush() after each and every output of text
-	 * commands are/can be:
-		- max 2048 characters
-		- max 512 args
-		- blank lines
-		- comments starting with #
-	 * consider using the following structure:
-		- parent process (shell) continues running
-		- non-built in commands cause fork
-			- this child handles i/o then...
-			- calls exec
-	 * note: redirection symbols and dest/source are
-			 NOT passed on to children i.e. you must
-			 handle that yourself
-	
-
-	Without further ado...
 	
 *************************************************************/
 
